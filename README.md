@@ -6,6 +6,14 @@ A simpler Python wrapper to inteface with the BrightLocal REST API. The wrapper 
 
 
 
+API Reference
+--------
+
+API documentation for BrightLocal: http://apidocs.brightlocal.com/
+
+
+
+
 Examples
 --------
 
