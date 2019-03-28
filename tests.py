@@ -64,7 +64,7 @@ def testFetchUrls():
 testFetchUrls()  # Run First
 
 def testBatchResults():
-	batch_id = 9834613
+	batch_id = # Enter BATCH ID generated from testFetchUrls()
 	
 	with open('credentials.json', 'rb') as fcredentials:
 		credentials = json.load(fcredentials)
@@ -87,12 +87,12 @@ def testBatchResults():
 	pp = pprint.PrettyPrinter(depth=4)
 	
 	for jobset_key, jobset in batchresults.items():
-		print jobset_key
-		print
+		print(jobset_key)
+		print('')
 		
 		for job in jobset:
-			print 'Job', job['job-id']
-			print
+			print('Job', job['job-id'])
+			print('')
 			
 			pp.pprint( job['payload'] )
 			pp.pprint( job['results'] )
