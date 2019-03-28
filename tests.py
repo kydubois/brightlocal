@@ -1,3 +1,6 @@
+'''
+Run testFetchUrls() first to generate your Batch ID.  Save that batch ID and use that to run testBatchResults()
+'''
 # stdlib imports
 import json
 import pprint
@@ -35,11 +38,11 @@ def testFetchUrls():
 			method='/v4/ld/fetch-profile-url',
 			params={
 				'batch-id':  batch_id,
-				'local-directory': directory,
 				'business-names': 'Eleven Madison Park',
 				'country': 'USA',
 				'city': 'New York',
-				'postcode': '10010'
+				'postcode': '10010',
+				'local-directory': directory
 			}
 		)
 		
@@ -57,6 +60,8 @@ def testFetchUrls():
 		pass
 	
 	return
+
+testFetchUrls()  # Run First
 
 def testBatchResults():
 	batch_id = 9834613
