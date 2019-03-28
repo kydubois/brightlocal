@@ -48,22 +48,6 @@ def testGetAllReports():
 
     print('testGetAllReports.csv write with campaign information')
 
-
-    # if (result['success']):
-    #     print('Added job with ID {}'.format(result['job-id']))
-    #     csvfhand.writerow(['',result['job-id']])
-    #     pass
-    #
-    # pass
-    #
-    # success_or_failure = batchapi.commit(batch_id)
-    #
-    # if success_or_failure:
-    #     print('Committed batch successfully.')
-    #     pass
-    #
-    # return
-
     fhand.close()
     return
 
