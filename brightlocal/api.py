@@ -88,10 +88,10 @@ class BrightLocalAPI(object):
 	def get_sig_and_expires(self, expiry=None):
 		expires = calendar.timegm( time.gmtime() ) + ( BrightLocalAPI.MAX_EXPIRY if expiry is None else expiry )
 
-		data = self.key + str(expires)
+		data = self.key + str(expires).encode('ascii')
 
-		digest = hmac.new(self.secret, data, digestmod=hashlib.sha1).digest()
-		sig = base64.standard_b64encode(digest)
+		digest = hmac.new(self.secret, data, digestmod=hashlib.sha1)
+		sig = base64.b64encode(digest.digest())
 
 		return sig, expires
 
