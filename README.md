@@ -66,3 +66,8 @@ Tests
 Test methods expect a JSON file named `credentials.json` with your unique `key` and `secret` for using the API.
 
 
+Updates
+-----
+Made minor changes to api.py and test.py for ability to run with Python 3
+
+
